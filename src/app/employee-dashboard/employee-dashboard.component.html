@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light bg-primary">
+<div class="container-fluid">
+<h1 style="color: aliceblue;" class="navbar-brand">Angular Crud</h1>
+<div class="d-flex">
+
+     <button type="Button" id="add-btn" class="btn btn-success" (click)="addEmployee()" data-bs-target="#examplemodal"> Add</button> 
+<button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
+</div>
+
+<div class="table mt-3">
+<table>
+<tr>
+    <th>F Name</th>
+    <th>1name</th>
+    <th> Email</th>
+    <th>Phone</th>
+    <th>Password</th>
+    <th>Id</th>
+</tr>
+</table>
+<tr *ngFor="let item of data">
+    <td>{{ item.fname}}</td>
+    <td>{{ item.lname }}</td>
+    <td>{{ item.email}}</td>
+    <td>{{ item.phone }}</td>
+    <td>{{ item.password}}</td>
+    <td>{{ item.id}}</td>
+  </tr>
+</div>
